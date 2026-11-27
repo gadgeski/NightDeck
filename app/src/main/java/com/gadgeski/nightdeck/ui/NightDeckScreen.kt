@@ -73,7 +73,6 @@ fun NightDeckScreen(
     viewModel: NightDeckViewModel,
     listState: LazyListState = rememberLazyListState()
 ) {
-    val colors = NightDeckTheme.colors
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     val coroutineScope = rememberCoroutineScope()
     val focusManager = LocalFocusManager.current
@@ -120,7 +119,6 @@ fun NightDeckScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(colors.background)
             .systemBarsPadding()
             .imePadding()
     ) {
